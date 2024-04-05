@@ -6,7 +6,6 @@ LX16A.initialize("/dev/ttyUSB0", 0.1)
 
 minN = 1
 maxN = 9
-#test
 
 servos = [0]
 
