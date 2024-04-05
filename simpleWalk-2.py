@@ -8,7 +8,6 @@ minN = 1
 maxN = 9
 
 servos = [0]
-# No passphrase needed?
 
 try:
     for i in range(minN, maxN):
