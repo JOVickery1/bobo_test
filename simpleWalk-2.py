@@ -40,18 +40,18 @@ startingAngles = np.array([0., 120., 74.88, 177.6, 73.44, 119.76, 126.48, 171.36
 goalAngles = np.zeros((int(1/time_step),9))
 
 # this just generates angles for pushups for some reason
-for j in range(int(1/time_step)):
-    for i in range(minN, maxN):
-        if i == 1 or i == 7:
-            goalAngles[j][i] = np.sin(2*np.pi*tsin)*a + startingAngles[i]
-        elif i == 2 or 8:
-            goalAngles[j][i] = np.cos(2*np.pi*tcos)*b + startingAngles[i]
-        elif i == 3 or i == 5:
-            goalAngles[j][i] = np.cos(2*np.pi*tsin)*a + startingAngles[i]
-        elif i == 4 or i == 6:
-            goalAngles[j][i] = np.sin(2*np.pi*tcos)*b + startingAngles[i]
-    tsin += time_step
-    tcos += time_step
+# for j in range(int(1/time_step)):
+#     for i in range(minN, maxN):
+#         if i == 1 or i == 7:
+#             goalAngles[j][i] = np.sin(2*np.pi*tsin)*a + startingAngles[i]
+#         elif i == 2 or 8:
+#             goalAngles[j][i] = np.cos(2*np.pi*tcos)*b + startingAngles[i]
+#         elif i == 3 or i == 5:
+#             goalAngles[j][i] = np.cos(2*np.pi*tsin)*a + startingAngles[i]
+#         elif i == 4 or i == 6:
+#             goalAngles[j][i] = np.sin(2*np.pi*tcos)*b + startingAngles[i]
+#     tsin += time_step
+#     tcos += time_step
         
 
 homeAngle = np.array([0., 120., 74.88, 177.6, 73.44, 119.76, 126.48, 171.36, 90.72])

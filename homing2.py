@@ -122,15 +122,17 @@ while True:
     # If all eight motors are homed, disable torques for each motor and end program
     if homed_motors == 8:
         for i in range(minN, maxN):
-            try:
-                servos[i].disable_torque()
-                # print(f'torque on motor {i} disabled')
-                print(servos[i].is_torque_enabled())
-            except ServoTimeoutError as e:
-                print(f'Error with servo {e.id}')
-                pass
-        # print('Right before quit:')
-        # for i in range(minN,maxN):
-        #     print(servos[i].is_torque_enabled())  
+            servos[i].disable_torque()
         break
-        # quit()
+        #     try:
+        #         servos[i].disable_torque()
+        #         # print(f'torque on motor {i} disabled')
+        #         print(servos[i].is_torque_enabled())
+        #     except ServoTimeoutError as e:
+        #         print(f'Error with servo {e.id}')
+        #         pass
+        # # print('Right before quit:')
+        # # for i in range(minN,maxN):
+        # #     print(servos[i].is_torque_enabled())  
+        # break
+        # # quit()

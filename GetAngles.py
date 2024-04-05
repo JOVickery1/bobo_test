@@ -28,7 +28,7 @@ for i in range(minN, maxN):
     else:
         desiredAngles[i] = 70
 
-while True:
+for i in range(2):
     try:
         # Iterate through motors 1 to 8
         for i in range(minN, maxN):
