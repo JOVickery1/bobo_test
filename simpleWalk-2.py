@@ -8,7 +8,7 @@ minN = 1
 maxN = 9
 
 servos = [0]
-# Now let's see if it works
+# Can we use the fancy button
 
 try:
     for i in range(minN, maxN):
