@@ -1,5 +1,4 @@
 from lx16a import *
-import time
 import numpy as np
 
 LX16A.initialize("/dev/ttyUSB0", 0.1)
@@ -12,7 +11,7 @@ servos = [0]
 try:
     for i in range(minN, maxN):
         servos.append(LX16A(i))
-        
+
         servos[i].disable_torque
 
 except ServoTimeoutError as e:
