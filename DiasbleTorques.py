@@ -12,6 +12,7 @@ servos = [0]
 try:
     for i in range(minN, maxN):
         servos.append(LX16A(i))
+        
         servos[i].disable_torque
 
 except ServoTimeoutError as e:

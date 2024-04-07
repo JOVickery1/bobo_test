@@ -83,6 +83,6 @@ for j in range(100):
     # works well for freq = 2pi
     t+=0.1
     time.sleep(0.1)
-        
-    # t+=0.01
-    # time.sleep(0.001) 
+    # time.sleep(0.1) # combining with move_time effectively slows down the movement without jitters 
+    # but it is much less stable when time sleep is 0.1 
+
